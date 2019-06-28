@@ -1,7 +1,7 @@
-apiVersion: autoscaling/v2beta1
+apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: hpa-example
+  name: hpa-example-autoscaler
   namespace: test
 spec:
   scaleTargetRef:
@@ -10,10 +10,4 @@ spec:
     name: hpa-example-deployment
   minReplicas: 1
   maxReplicas: 5
-  metrics:
-  - type: Resource
-    resource:
-      name: cpu
-      target:
-        type: AverageUtilization
-        averageUtilization: 60
+  targetCPUUtilizationPercentage: 60
