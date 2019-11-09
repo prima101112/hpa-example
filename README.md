@@ -147,3 +147,5 @@ set it on the `/etc/host` and you will see the result.
 ## HPA
 
 The Horizontal Pod Autoscaler automatically scales the number of pods in a replication controller, deployment or replica set based on observed CPU utilization (or, with custom metrics support, on some other application-provided metrics).
+
+

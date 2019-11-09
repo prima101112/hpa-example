@@ -7,5 +7,7 @@ RUN apt-get install -y libpq-dev \
 
 COPY config/driver.ini $PHP_INI_DIR/conf.d/
 
+RUN apt-get install curl
+
 VOLUME /var/www/html/
 EXPOSE 80
